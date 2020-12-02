@@ -77,7 +77,7 @@
     
 >写入学生信息并将学生信息和古诗保存在文件中
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         Student student = new Student("1","张三","男");
         System.out.println("学生信息："+student.toString());
         File file = new File("D:/java/4/src/inputFileContent.txt");
