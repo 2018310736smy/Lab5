@@ -87,7 +87,8 @@
         System.out.println(outputFileContent);
 
 # 运行结果截图：
-
+ ![image](https://github.com/2018310736smy/Lab5/blob/main/jietu1.jpg)
+ ![image](https://github.com/2018310736smy/Lab5/blob/main/jietu2.jpg)
 
 # 实验感想：
 通过本次实验我掌握了Java的文件处理和String的用法。
