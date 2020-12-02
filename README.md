@@ -45,7 +45,9 @@
 3.设计程序完成上述的业务逻辑处理，并且把“古诗处理后的输出”结果存储到学生基本信息所在的文本文件A中。
 
 # 实验代码：
+
 >实现古诗整理的功能
+
     public static String addFh(String content){
         String result = "";
         int i=1;
@@ -62,7 +64,9 @@
         }
         return result;
     }
+    
 >实现提供参数，统计古诗中某个字或词出现的次数
+
     public static void searchStr(String str,String outputFileContent){     //获取字符串的长度
         int strlen=outputFileContent.length();                             //把需要查找的元素都替换为空
         String afterstr=outputFileContent.replaceAll(str,"");              //获取替换后的字符串的长度
@@ -70,7 +74,9 @@
         int endlen=strlen-afterlen;
         System.out.println("字符"+str+"出现次数为："+endlen);
     }
+    
 >写入学生信息并将学生信息和古诗保存在文件中
+
    public static void main(String[] args) {
         Student student = new Student("1","张三","男");
         System.out.println("学生信息："+student.toString());
