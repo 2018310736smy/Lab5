@@ -44,5 +44,44 @@
 
 3.设计程序完成上述的业务逻辑处理，并且把“古诗处理后的输出”结果存储到学生基本信息所在的文本文件A中。
 
-# 实验过程：
-创建Student.java和monizuoye.java类。Student.java类定义学生的相关信息，包含no，name，sex，这三个属性和他们的get()和set()方法。程序的主要测试在monizuoye.java类中，
+# 实验代码：
+>实现古诗整理的功能
+    public static String addFh(String content){
+        String result = "";
+        int i=1;
+        char[]  chars = content.toCharArray();
+        for(char hz:chars){
+            result = result +hz;
+            if(i%7==0&&i%14!=0){
+                result = result +"，";
+            }
+            if(i%14==0){
+                result = result +"。\n\r";
+            }
+            i++;
+        }
+        return result;
+    }
+>实现提供参数，统计古诗中某个字或词出现的次数
+    public static void searchStr(String str,String outputFileContent){     //获取字符串的长度
+        int strlen=outputFileContent.length();                             //把需要查找的元素都替换为空
+        String afterstr=outputFileContent.replaceAll(str,"");              //获取替换后的字符串的长度
+        int afterlen=afterstr.length();                                    //要被查找的元素的个数=原长度-替换后的长度
+        int endlen=strlen-afterlen;
+        System.out.println("字符"+str+"出现次数为："+endlen);
+    }
+>写入学生信息并将学生信息和古诗保存在文件中
+   public static void main(String[] args) {
+        Student student = new Student("1","张三","男");
+        System.out.println("学生信息："+student.toString());
+        File file = new File("D:/java/4/src/inputFileContent.txt");
+        String inputFileContent = txt2String(file);
+        System.out.println(inputFileContent);
+        String outputFileContent =  outputFileContent = student.toString() + "\r\n" +addFh(inputFileContent);
+        System.out.println(outputFileContent);
+
+# 运行结果截图：
+
+
+# 实验感想：
+通过本次实验我掌握了Java的文件处理和String的用法。
