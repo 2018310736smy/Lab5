@@ -91,4 +91,4 @@
  ![image](https://github.com/2018310736smy/Lab5/blob/main/jietu2.jpg)
 
 # 实验感想：
-通过本次实验我掌握了Java的文件处理和String的用法。
+通过本次实验，我掌握了Java的读取/写入文件的方法和字符串String的用法，通过百度和与同学讨论学习解决了写入时候总是出现乱码的问题。
